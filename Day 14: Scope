@@ -1,0 +1,19 @@
+    // Add your code here
+12
+    public Difference(int[] a)
+13
+        {
+14
+            elements=a.clone();
+15
+    }
+16
+    public void computeDifference()
+17
+        {
+18
+            Arrays.sort(elements);
+19
+            maximumDifference=elements[elements.length-1]-elements[0];
+20
+    }
