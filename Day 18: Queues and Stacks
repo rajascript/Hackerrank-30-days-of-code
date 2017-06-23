@@ -1,0 +1,45 @@
+public class Solution {
+    // Write your code here.
+    static Stack<Character> stack= new Stack<Character>();
+    static char q[] =new char[100];
+    static int front=-1,rear=-1;
+    public static void pushCharacter(char c)
+    {
+        
+           stack.push(c);
+        
+    }
+    public static void enqueueCharacter(char c)
+    {
+        if(front==-1)
+        {
+            front=rear=0;
+            q[rear]=c;
+        }
+        else if(front<=rear&&rear!=-1)
+        {
+            rear++;
+            q[rear]=c;
+        }
+        
+    }
+    public static char popCharacter()
+    {
+        if(!stack.empty())
+        {char x=stack.peek();
+        stack.pop();
+        return x;
+        }
+        return 'z';
+     }
+    public static char dequeueCharacter()
+    {
+        if(front<=rear&&rear!=-1)
+        {
+            char x=q[front];
+            front++;
+            return x;
+        }
+        return 'a';
+    }
+    
