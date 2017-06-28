@@ -1,0 +1,28 @@
+   static void levelOrder(Node root){
+      //Write your code here
+      if(root==null)
+      {
+          return;
+      }
+      Node q[]=new Node[1000];
+      int front=0,rear=0;
+      q[rear]=root;
+      while(front<=rear||rear!=-1)
+      {
+          Node curr=q[front];
+         
+          System.out.print(curr.data+" ");
+          
+          if(curr.left!=null)
+          {
+              rear++;
+              q[rear]=curr.left;
+          }
+          if(curr.right!=null)
+          {
+              rear++;
+              q[rear]=curr.right;
+          }
+          front++;
+      }
+    }
