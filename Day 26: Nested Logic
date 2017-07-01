@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+                Scanner sc=new Scanner(System.in);
+                int date1=sc.nextInt();//taking date 1
+                int month1=sc.nextInt();//taking month 1
+                int year1=sc.nextInt();//taking year 1
+        
+                int date2=sc.nextInt();//taking date 2
+                int month2=sc.nextInt();//taking month 2
+                int year2=sc.nextInt();//taking year 2
+                
+                if(year1<year2)
+                {
+                   
+                            System.out.println(0);
+                     
+                }
+                else
+                System.out.println(year1>year2?10000:month1>month2?(month1-month2)*500:date1>date2?(date1-date2)*15:0);
+                
+    }
+}
